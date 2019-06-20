@@ -1,4 +1,11 @@
 en:
+  login:
+    fail: "Email or password is wrong"
+    title: "Login"
+    new: "Login"
+    signup: "Sign Up"
+    logout: "Log out"
+    setting: "Settings"
   title: "Sample App"
   auth:
     signup: "Sign up now!"
@@ -12,6 +19,7 @@ en:
     about: "about"
     contact: "contact"
     news: "News"
+    user: "Users"
   footer:
     nav:
       url: "http://news.railstutorial.org/"
