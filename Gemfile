@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 git_source(:github){|repo| "https://github.com/#{repo}.git"}
-
 ruby "2.5.5"
 gem "bootsnap", ">= 1.1.0", require: false
+gem "bootstrap-sass", "3.4.1"
 gem "coffee-rails", "~> 4.2"
 gem "jbuilder", "~> 2.5"
 gem "puma", "~> 3.11"
@@ -27,5 +27,6 @@ group :test do
   gem "chromedriver-helper"
   gem "selenium-webdriver"
 end
+gem "rails-controller-testing"
 gem "rubocop", "~> 0.54.0", require: false
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
