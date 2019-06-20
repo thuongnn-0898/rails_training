@@ -7,6 +7,7 @@ en:
     logout: "Log out"
     setting: "Settings"
     remember_html: "<span>Remember me on this computer</span>"
+    nologin: "Please log in."
   title: "Sample App"
   auth:
     signup: "Sign up now!"
@@ -31,9 +32,20 @@ en:
       </small>'
   hello: "Hello world"
   user:
+    index: "All users"
+    btn_update: "Save changes"
+    title_update: "Update your profile"
+    profile_update: "Update profile success"
+    change_avt_html: '<a href="http://gravatar.com/emails" target="_blank">Change</a>'
+    edit: "Edit user"
+    notfound: "Not found user with id : %{id}"
     new: "This is sign up page"
     label:
       confirm: "Confirmation"
+    delete: "Delete"
+    delete_msg: "Are you sure?"
+    delete_success: "Delete %{email} success"
+    detele_fail : "You can't"
   application:
     title: "Ruby on Rails Tutorial Sample App"
   about:
