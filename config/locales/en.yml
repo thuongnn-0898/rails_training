@@ -1,4 +1,12 @@
 en:
+  login:
+    fail: "Email or password is wrong"
+    title: "Login"
+    new: "Login"
+    signup: "Sign Up"
+    logout: "Log out"
+    setting: "Settings"
+    nologin: "Please log in."
   title: "Sample App"
   auth:
     signup: "Sign up now!"
@@ -12,6 +20,7 @@ en:
     about: "about"
     contact: "contact"
     news: "News"
+    user: "Users"
   footer:
     nav:
       url: "http://news.railstutorial.org/"
@@ -22,9 +31,18 @@ en:
       </small>'
   hello: "Hello world"
   user:
+    index: "All users"
+    btn_update: "Save changes"
+    title_update: "Update your profile"
+    profile_update: "Update profile success"
+    change_avt_html: '<a href="http://gravatar.com/emails" target="_blank">Change</a>'
+    edit: "Edit user"
     new: "This is sign up page"
     label:
       confirm: "Confirmation"
+    delete: "Delete"
+    delete_msg: "Are you sure?"
+    delete_success: "Delete %{email} success"
   application:
     title: "Ruby on Rails Tutorial Sample App"
   about:

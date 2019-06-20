@@ -1,3 +1,5 @@
 min_val: 6
 max_val: 255
 size_avatar: 80
+paginate:
+    list_user: 10

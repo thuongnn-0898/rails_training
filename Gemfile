@@ -2,6 +2,9 @@ source "https://rubygems.org"
 git_source(:github){|repo| "https://github.com/#{repo}.git"}
 ruby "2.5.5"
 gem "bcrypt", "3.1.12"
+gem "faker", "1.7.3"
+gem "will_paginate", "~> 3.1.0"
+gem "bootstrap-will_paginate", "1.0.0"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-sass", "3.4.1"
 gem "coffee-rails", "~> 4.2"
@@ -29,6 +32,7 @@ group :test do
   gem "selenium-webdriver"
 end
 gem "config"
+gem "jquery-rails"
 gem "rails-controller-testing"
 gem "rubocop", "~> 0.54.0", require: false
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
