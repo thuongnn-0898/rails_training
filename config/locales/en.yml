@@ -1,11 +1,16 @@
 en:
   title: "Sample App"
+  auth:
+    signup: "Sign up now!"
   link:
     home: "Home"
     help: "Help"
     about: "about"
     contact: "contact"
+    news: "News"
   footer:
+    nav:
+      url: "http://news.railstutorial.org/"
     content_html:
       '<small>
       The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
