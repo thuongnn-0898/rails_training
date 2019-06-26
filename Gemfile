@@ -29,6 +29,7 @@ group :test do
   gem "selenium-webdriver"
 end
 gem "config"
+gem "jquery-rails"
 gem "rails-controller-testing"
 gem "rubocop", "~> 0.54.0", require: false
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
