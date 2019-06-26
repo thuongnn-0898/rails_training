@@ -2,6 +2,10 @@ en:
   title: "Sample App"
   auth:
     signup: "Sign up now!"
+    success: 'Login success with Email %{email}'
+  errors:
+    one: "The form contains %{count} error"
+    other: "The form contains %{count} errors"
   link:
     home: "Home"
     help: "Help"
@@ -16,6 +20,11 @@ en:
       The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
       by <a href="http://www.michaelhartl.com/">Michael Hartl</a>
       </small>'
+  hello: "Hello world"
+  user:
+    new: "This is sign up page"
+    label:
+      confirm: "Confirmation"
   application:
     title: "Ruby on Rails Tutorial Sample App"
   about:
