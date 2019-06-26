@@ -6,6 +6,7 @@ en:
     signup: "Sign Up"
     logout: "Log out"
     setting: "Settings"
+    remember_html: "<span>Remember me on this computer</span>"
   title: "Sample App"
   auth:
     signup: "Sign up now!"
