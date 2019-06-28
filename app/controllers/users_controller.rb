@@ -1,27 +1,28 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, except: [:new, :create]
   # before_action :load_user, only: [:edit, :update, :show, :destroy]
-  before_action :load_user, except: [:create, :index, :create]
+  before_action :load_user, except: [:index, :create, :new]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.paginate(page: params[:page],
-      per_page: Settings.paginate.list_user)
+    @users = User.activated.paginate(page: params[:page])
   end
 
   def new
     @user = User.new
   end
 
-  def show; end
+  def show
+    redirect_to(root_url) && return unless current_user.activated?
+  end
 
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = t("auth.success", email: @user.email)
-      login @user
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t "auth.create"
+      redirect_to root_url
     else
       render :new
     end
@@ -50,12 +51,12 @@ class UsersController < ApplicationController
   private
 
   def load_user
-   @user = User.find_by(id: params[:id])
-   return if @user
-   render html: t("user.notfound", id: params[:id])
+    @user = User.find_by(id: params[:id])
+    return if @user
+    render html: t("user.notfound", id: params[:id])
   end
 
-   def logged_in_user
+  def logged_in_user
     unless logged_in?
       store_location
       flash[:danger] = t("login.nologin")
@@ -76,6 +77,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit :name, :email, :password,
-    :password_confirmation
+      :password_confirmation
   end
 end

@@ -1,0 +1,3 @@
+<%= t("mail.sendmail_html",name: @user.name)%>
+
+<%= link_to t("mail.link"), edit_account_activation_url(@user.activation_token, email: @user.email) %>

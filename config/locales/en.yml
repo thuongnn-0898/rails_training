@@ -8,10 +8,12 @@ en:
     setting: "Settings"
     remember_html: "<span>Remember me on this computer</span>"
     nologin: "Please log in."
+    noactive: "Account not activated.Check your email for the activation link."
   title: "Sample App"
   auth:
     signup: "Sign up now!"
     success: 'Login success with Email %{email}'
+    create: "Please check your email to activate your account."
   errors:
     one: "The form contains %{count} error"
     other: "The form contains %{count} errors"
@@ -73,3 +75,12 @@ en:
   home:
     title: "This is simple page"
     content_html: This is the home page for the <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a> sample application.
+  mail:
+    sendmail_html:
+      '<h1>Sample App</h1>
+      <p>Hi %{name},</p>
+      <p>Welcome to the Sample App! Click on the link below to activate your account:</p>'
+    link: "Activate"
+    subject: "Account activation"
+    active_ok: "Account activated!"
+    active_fail: Invalid activation link"
