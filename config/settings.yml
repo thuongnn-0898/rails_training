@@ -4,3 +4,4 @@ size_avatar: 80
 paginate:
   list_user: 10
 remember: 1
+expired: 5
