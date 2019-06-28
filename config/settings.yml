@@ -4,4 +4,9 @@ size_avatar: 80
 paginate:
   list_user: 10
 remember: 1
+microposts:
+  max_val: 140
+  minisize: 50
 expired: 5
+picture_size: 5
+avatar_info: 50

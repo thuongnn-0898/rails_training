@@ -5,9 +5,11 @@ gem "bcrypt", "3.1.12"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-sass", "3.4.1"
 gem "bootstrap-will_paginate", "1.0.0"
+gem "carrierwave", "1.2.2"
 gem "coffee-rails", "~> 4.2"
 gem "faker", "1.7.3"
 gem "jbuilder", "~> 2.5"
+gem "mini_magick", "4.7.0"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.3"
 gem "sass-rails", "~> 5.0"
@@ -37,6 +39,8 @@ gem "rails-controller-testing"
 gem "rubocop", "~> 0.54.0", require: false
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
-  gem "pg", "0.20.0"
+  gem "fog", "1.42"
+  gem "pg"
 end
 gem "figaro"
+gem "i18n-js"
