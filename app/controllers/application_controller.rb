@@ -6,8 +6,12 @@ class ApplicationController < ActionController::Base
 
   def load_user
     @user = User.find_by(email: params[:email])
-    return if @user
-    render html: t("user.notfound", id: params[:id])
+    return if @user || not_found
+    # render html: t("user.notfound", id: params[:id])
+  end
+
+  def not_found
+    render file: "#{Rails.root}/public/404", layout: false, status: :not_found
   end
 
   def check_login

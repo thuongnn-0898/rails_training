@@ -10,3 +10,4 @@ microposts:
 expired: 5
 picture_size: 5
 avatar_info: 50
+per_page: 6
