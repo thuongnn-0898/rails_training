@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :check_login, only: :new
   before_action :logged_in_user, except: [:new, :create]
   # before_action :load_user, only: [:edit, :update, :show, :destroy]
   before_action :load_user, except: [:index, :create, :new]
@@ -31,9 +32,9 @@ class UsersController < ApplicationController
   def edit; end
 
   def update
-    if user.update_attributes user_params
+    if @user.update_attributes user_params
       flash[:success] = t("user.profile_update")
-      redirect_to user
+      redirect_to @user
     else
       render :edit
     end
