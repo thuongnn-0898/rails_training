@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @microposts = @user.microposts.order_by.paginate(page: params[:page])
     redirect_to(root_url) && return unless current_user.activated?
   end
 
@@ -55,14 +56,6 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     return if @user
     render html: t("user.notfound", id: params[:id])
-  end
-
-  def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = t("login.nologin")
-      redirect_to login_url
-    end
   end
 
   def correct_user

@@ -50,6 +50,7 @@ en:
     delete_msg: "Are you sure?"
     delete_success: "Delete %{email} success"
     detele_fail : "You can't"
+    profile: "view my profile"
   application:
     title: "Ruby on Rails Tutorial Sample App"
   about:
@@ -104,3 +105,13 @@ en:
     succcess: "Password has been reset."
     expiration: "Password reset has expired."
     not_found: "Not Found Email %{email}"
+  microposts:
+    save: "Micropost created!"
+    destroy: "Micropost deleted"
+    detroy_fail: "Delet failed"
+    upload: "should be less than %{mb}MB"
+    one: "%{count} micropost"
+    other: "%{count} microposts"
+    placeholder: "Compose new micropost..."
+  jquery:
+    alert: "Kích thước ảnh không dược quá 5MB. Vui lòng chọn ảnh nhỏ hơn."
