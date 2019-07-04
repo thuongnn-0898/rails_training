@@ -113,5 +113,16 @@ en:
     one: "%{count} micropost"
     other: "%{count} microposts"
     placeholder: "Compose new micropost..."
+    feed: "Micropost Feed"
   jquery:
     alert: "Kích thước ảnh không dược quá 5MB. Vui lòng chọn ảnh nhỏ hơn."
+    upload: "should be less than 5MB"
+    one: "%{count} micropost"
+    other: "%{count} microposts"
+  relationships:
+    follow: "Follow"
+    unfollow: "Unfollow"
+    profile: "view my profile"
+    following: "Following"
+    follower: "Follower"
+    not_found: "Not found this user"

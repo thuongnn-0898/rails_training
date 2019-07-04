@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @microposts = @user.microposts.order_by.paginate(page: params[:page])
+    @microposts = @user.microposts.order_by.paginate(per_page: Settings.per_page, page: params[:page])
     redirect_to(root_url) && return unless current_user.activated?
   end
 
@@ -50,12 +50,25 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def following
+    @title = t "relationships.following"
+    # @user  = User.find(params[:id])
+    @users = @user.following.paginate(page: params[:page])
+    render "show_follow"
+  end
+
+  def followers
+    @title = t "relationships.follower"
+    # @user  = User.find(params[:id])
+    @users = @user.followers.paginate(page: params[:page])
+    render "show_follow"
+  end
+
   private
 
   def load_user
     @user = User.find_by(id: params[:id])
-    return if @user
-    render html: t("user.notfound", id: params[:id])
+    return if @user || not_found
   end
 
   def correct_user

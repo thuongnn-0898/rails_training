@@ -40,7 +40,7 @@ gem "rubocop", "~> 0.54.0", require: false
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem "fog", "1.42"
-  gem "pg"
+  gem "pg", "0.20.0"
 end
 gem "figaro"
 gem "i18n-js"
